@@ -27,7 +27,7 @@ const MyProfile = () => {
     if (hasConfirmed) {
       try {
         await fetch(`/api/prompt/${post._id.toString()}`, {
-          method: "PATCH",
+          method: "DELETE",
         });
         const filteredPosts = posts.filter((p) => p._id === post._id);
         setPosts(filteredPosts);
